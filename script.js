@@ -45,8 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(currentTheme);
     });
 
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    applyTheme(savedTheme);
+    const savedTheme = localStorage.getItem('theme')
+    savedTheme ? applyTheme(savedTheme) : applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    if (!savedTheme) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            applyTheme(e.matches ? 'dark' : 'light');
+        });
+    }
 
     // --- View Toggle ---
     viewToggle.addEventListener('click', () => {

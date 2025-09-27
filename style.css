@@ -217,7 +217,7 @@ body {
 .sidebar-toggle {
     position: absolute;
     top: 1rem;
-    right: -40px;
+    right: -30px;
     background: var(--primary);
     color: var(--primary-foreground);
     border: none;
@@ -563,7 +563,7 @@ body {
 /* Content toolbar above file content */
 .content-toolbar {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 0.5rem;
     justify-content: flex-end;
     margin-bottom: 0.75rem;
@@ -581,6 +581,8 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+    font-family: inherit;
+    font-size: 0.875rem;
 }
 
 .btn:hover {
