@@ -1,0 +1,181 @@
+# **Concept 1 — Assignment 3: Scope and Quality Bar**
+
+- **Task:** Summarize **1–2 academic sources** on **variable names**. Write in **LaTeX**. Add an **approach** section about process and Gen-AI use. Length: **2–3 pp** for 1 source, **4–5 pp** for 2 sources, **≤5 pp** total. Deadline **Fri 3 Oct, 20:00**.
+- **Content must answer:** programming language studied; study type (code analysis vs preference elicitation); most important outcomes. **Integrate and compare** if using two papers.
+- **Language/structure:** formal style, no errors, complete sentences, clear section headings. **In-text** citations + **reference list**. Use the **provided LaTeX template**. Include your approach at the end.
+
+**Implications for scoring**
+
+- Depth over breadth: fully summarize each source before comparing.
+- Alignment: keep the text strictly on **variable-name research**.
+- Transparency: declare any Gen-AI assistance; no copy-pasting.
+
+**Suggested report skeleton**
+
+- **Title + Abstract (optional)**
+- **1. Introduction** — scope, definition of “variable name” in context, why it matters.
+- **2. Methods of Source A** — language, participants or corpus, measures.
+- **3. Findings of Source A**
+- **4. (If applicable) Methods of Source B**
+- **5. (If applicable) Findings of Source B**
+- **6. Comparison** — converge/diverge on outcomes; methodological contrasts.
+- **7. Limits and External Validity** — population, tasks, languages.
+- **8. Implications for CS Education / SE Practice**
+- **9. Conclusion**
+- **References** — consistent style.
+- **Appendix: Approach** — process + Gen-AI disclosure.
+
+---
+
+# **Concept 2 — Exam: Critical Essay on Gen-AI in CS-Ed**
+
+- **Format:** In-class essay that **critically reflects** on **one** provided study. Notes may be taken now but **not** brought to the exam. Follow prompts. Write step by step.
+
+**Preparation pipeline**
+
+1. Select paper now. 2) Read twice. 3) Build a one-page mental map (no physical notes allowed in exam). 4) Rehearse a **thesis-antithesis-synthesis** outline.
+
+**On the day**
+
+- Re-read the paper, extract claim → evidence → limitation chains.
+- Draft fast: **Intro (claim)** → **Body 1–3 (evidence + method limits)** → **Counterpoints** → **Conclusion (warranted scope)**.
+
+---
+
+# **Concept 3 — Audience and Genre**
+
+**Communication goal ↔ audience knowledge dictates register.** Goals: inform, convince, entertain. Audience factors affect both **what** and **how** you say it.
+
+**Genre features**
+
+| **Genre** | **Typical cues** | **Use in course** |
+| --- | --- | --- |
+| Blog | rhetorical questions, personal voice | Not for Assignment 3 |
+| Newspaper | concise, accessible, claims with light evidence | Not sufficient rigor |
+| Novel | narrative, figurative language | Out of scope |
+| Academic paper | precise claims, methods, citations | Target register |
+
+---
+
+# **Concept 4 — Academic Style: Five Constraints**
+
+1. **Precise and critical** — specify actor s, time spans, measures. Replace vague tokens (“people,” “this thing”) with exact referents and intervals.
+2. **Objective/neutral** — argue from evidence and reasoning, not assertion.
+3. **Formal** — no colloquialisms; explicit reasoning; variables and controls named.
+4. **Concise** — remove redundancy; keep only signal.
+5. **Sentence discipline** — complete sentences; vary length; avoid fragments.
+
+**Rewrite patterns (from slides)**
+
+- Vague → “Researchers have studied **X** for **≥10 years**.”
+- Unsupported → “It can be **demonstrated** via **Y** with references.”
+- Informal → “Researchers **cannot yet determine** effectiveness; they will **analyze** data controlling for **age, gender, SES**.”
+- Wordy → “Injury and mortality rates were **among the highest** recorded.”
+
+**Quick checklist**: precise, neutral, formal, concise, not overly complex.
+
+---
+
+# **Concept 5 — Evidence, Referencing, and Claims**
+
+- **Two supports:** 1) sources, 2) sound reasoning. Use a citation style (APA/MLA/IEEE).
+- **In-text vs references:** cite when paraphrasing or quoting; provide full entry in the bibliography. Example on slides uses **Shafak [1]**.
+- **Quotations:** rare. Once or twice per report or not at all. Never quote lists or long blocks.
+
+**Paraphrasing algorithm**
+
+1. Reread. 2) Hide. 3) Write anew. 4) Check: semantic fidelity, new structure, no sentence copying, no synonym swap. Add metacognitive checks: “Do I understand this?” “Am I thinking or copying?”
+
+**Paraphrase example standard**
+
+- Slide shows an **incorrect** near-synonym rewrite vs a **correct** conceptual restatement with citation (Thompson, 2009). Aim for the latter.
+
+---
+
+# **Concept 6 — Integrity, Plagiarism, and Gen-AI**
+
+**Plagiarism (LU):** presenting others’ text, ideas, images, **code**, etc., as your own, **intentional or not**. LIACS: no copying from students or external sources; quote and cite if you must; **Gen-AI use is by default not allowed** unless a course explicitly permits it. Suspicions go to the **Board of Examiners**.
+
+**Examples from slides**
+
+- **Jesse:** quote present but only in bibliography → **plagiarism**; needs in-text and quotation marks.
+- **Maja:** indirect source (Goodreads) → attribution doubtful; fix sourcing.
+- **Toby:** rewrites Wikipedia to beat a scanner → **still plagiarism**.
+- **Alex:** copies ChatGPT text → **plagiarism**; output is not your narrative and tends to be vague.
+
+**Gen-AI rules for this course**
+
+- **Exam:** not allowed.
+- **Assignment 3:** optional aid, but **no copying**, disclose use in approach section. You remain responsible for content.
+
+**Avoid-plagiarism decision path**
+
+- Did I **originate** the wording and structure? If not, **quote** or **paraphrase** + **cite**.
+- Is any code reused? Add **code header** and reference per example.
+
+---
+
+# **Concept 7 — Citing and Reusing Code**
+
+- **Reports:** <Author> (<Year>) <Title> (Version) [Source code]. <URL/Publisher>.
+    
+    Example on slide: “Smith, J. (2011). GraphicsDrawer source code (Version 2.0) [Source code]. http://…”.
+    
+- **In code:** place a header block above reused snippets with **Title, Author, Date, Version, Availability**.
+
+---
+
+# **Concept 8 — LaTeX and Overleaf: Workflow**
+
+- **Why LaTeX:** focus on content; precise control; strong math/tables; bibliographies.
+- **How:** write .tex, compile via **TeX engine** to PDF. Use **Overleaf**. Leiden EDU link and quick tutorial are on the slides. Template on **Brightspace**.
+
+**Minimal structure**
+
+```
+\documentclass{article}
+% packages per template
+\begin{document}
+\title{...}\author{...}\date{}
+\maketitle
+\begin{abstract}...\end{abstract}
+\section{Introduction}
+\section{Methods}
+\section{Results}
+\section{Discussion}
+\bibliographystyle{...}
+\bibliography{references}
+\end{document}
+```
+
+(Use the provided template over improvisation.)
+
+---
+
+# **Concept 9 — Writing Process and Metacognition**
+
+- Writing is **cognitively intensive**. Ideas and structure **emerge** during drafting. Use a **stepwise** approach and **metacognition**. Practice.
+- Micro-effects matter: small wording choices change meaning. Treat writing as **craft**. No shortcut.
+
+---
+
+# **Concept 10 — How to Approach Assignment 3 (Operational)**
+
+1. **Orient:** read brief + template; define scope.
+2. **Find** an academic paper (or two) on **variable names**.
+3. **Outline** the section headings first.
+4. **Summarize**: methods → results → limits.
+5. **Compare** if two sources: align research questions, methods, measures, outcomes.
+6. **Revise** for style constraints and citation accuracy.
+7. **Add Approach** section with Gen-AI disclosure.
+
+---
+
+# **High-leverage Do/Don’t (from slides, condensed)**
+
+- **Do:** specify populations, tasks, languages, metrics. **Don’t:** use empty superlatives.
+- **Do:** cite when paraphrasing. **Don’t:** synonym-swap.
+- **Do:** quote sparingly. **Don’t:** quote lists or large blocks.
+- **Do:** disclose Gen-AI use per assignment rules. **Don’t:** paste AI output.
+
+---
