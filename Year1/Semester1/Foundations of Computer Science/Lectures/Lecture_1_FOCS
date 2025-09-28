@@ -1,0 +1,141 @@
+# **Summary — Lecture 1: Foundations of Computer Science (Fall 2025, Bariatti & Kappé)**
+
+---
+
+## **1. Course Context**
+
+* Course focuses on the **mathematics underpinning computer science**, mainly **set theory**.
+* Skills:
+
+  * Reason mathematically like a computer scientist.
+  * Make precise, unambiguous formal statements.
+  * Prove claims rigorously.
+
+---
+
+## **2. Practical Course Information**
+
+* **Lectures**: Fridays, 15:15–17:00 (mostly Gorlaeus C3). Recordings later.
+* **Exercise classes**: enrollment required (Brightspace groups). Dutch-supported groups possible.
+* **Assessment**:
+
+  * Assignment 1 (Sep 26) — 10%
+  * Midterm (Oct 24) — 40%
+  * Assignment 2 (Nov 21) — 10%
+  * Final exam (Dec 16) — 40%
+  * Retake (Jan 28, 2026) replaces midterm+final if higher.
+  * Passing requires **≥ 5.5 (before rounding)**.
+* **Late policy**: −1 point per 24h late, max 4 days.
+* **Communication**: via Brightspace, official uMail.
+* **Help**: lecture questions → workgroups → Brightspace forum → email for logistics.
+* **Academic honesty**: plagiarism rules apply. **Generative AI use (e.g. ChatGPT) prohibited** unless explicitly cited.
+
+---
+
+## **3. Literature**
+
+* **Textbook**: *Schaum’s Outline of Discrete Mathematics* (4th ed., Lipschutz & Lipson, 2022). Cheap, with many exercises/solutions.
+
+---
+
+## **4. Discrete Mathematics**
+
+* Studies **discrete structures** (sets, integers, logic, graphs, combinatorics).
+* Motivated by digital computers (discrete steps, bits).
+* Applications in algorithms, languages, cryptography, theorem proving, databases.
+
+---
+
+## **5. Introductory Examples**
+
+* **Sets & Relations**: e.g., department assignments, who likes which animals.
+* **Graphs & Trees**: connections and hierarchies.
+* **Combinatorics**: counting, binomial coefficients.
+* **Applications**:
+
+  * Traveling Salesman Problem (algorithms, complexity).
+  * Databases (relations).
+  * Modeling systems (finite-state machines).
+
+---
+
+## **6. Foundations of Sets**
+
+* **Definition (Cantor)**: a set = collection of well-distinguished objects.
+* **Membership**: (x \in A) (x is in A), (x \notin A) (x not in A).
+* **Notation**:
+
+  * **Extensional**: list elements, e.g. ({0,2,4,6,…}).
+  * **Intensional**: property form, e.g. ({x \mid x \text{ is even}}).
+* **Order & duplicates**: irrelevant, e.g. ({1,2} = {2,1} = {1,2,1}).
+* **Equality**: (A=B \iff x \in A \iff x \in B).
+* **Subset**: (A \subseteq B \iff (\forall x \in A \Rightarrow x \in B)).
+
+  * Proper subset: (A \subset B) if B has more.
+* **Properties of subsets (Theorem 1.1)**:
+
+  * Reflexive: (A \subseteq A).
+  * Antisymmetric: if (A \subseteq B) and (B \subseteq A), then (A=B).
+  * Transitive: if (A \subseteq B) and (B \subseteq C), then (A \subseteq C).
+    → This forms a **partial order**.
+
+---
+
+## **7. Special Sets**
+
+* **Universal set (U)**: the domain of discourse.
+* **Empty set (∅)**: contains no elements. Always: (\emptyset \subseteq A \subseteq U).
+* **Number sets**:
+
+  * (\mathbb{N}): naturals ({0,1,2,…}).
+  * (\mathbb{N}^+): positive naturals.
+  * (\mathbb{Z}): integers.
+  * (\mathbb{Q}): rationals ({p/q}).
+  * (\mathbb{R}): reals (e.g., (\sqrt{2}, \pi, e)).
+
+---
+
+## **8. Venn Diagrams**
+
+* **Invented by John Venn (1880s)**.
+* Visual method to represent set relations.
+* Areas: intersections, unions, complements.
+* For 2 sets → 4 areas, for 3 sets → 8 areas, etc.
+* Beyond 4 sets, diagrams become impractical.
+
+---
+
+## **9. Set Operations**
+
+* **Union**: (A \cup B = {x \mid x \in A \text{ or } x \in B}).
+* **Intersection**: (A \cap B = {x \mid x \in A \text{ and } x \in B}).
+* **Complement**: (A^C = {x \in U \mid x \notin A}).
+* **Difference**: (A \setminus B = {x \mid x \in A \land x \notin B}).
+* **Symmetric difference**: (A \oplus B = (A \setminus B) \cup (B \setminus A)).
+
+**Properties**:
+
+* (A \cap B \subseteq A \subseteq A \cup B).
+* (A \subseteq B \iff (A \cap B = A \iff A \cup B = B)).
+* Equivalent formulations with complements: e.g. (A \subseteq B \iff B^C \subseteq A^C).
+
+---
+
+## **10. Proof Techniques**
+
+* **Via definitions**: unpack membership logic.
+* **Via Venn diagrams**: shading reasoning.
+* Example: (A \subseteq B \iff A \cap B = A).
+* Equalities can be proved step by step (e.g. ((A \cap B^C)^C = A^C \cup B)).
+
+---
+
+## **11. Closing**
+
+* **Lecture focus**:
+
+  * Sets, equality, subset, universal & empty set.
+  * Venn diagrams.
+  * Set operations (union, intersection, complement, difference, symmetric difference).
+  * Proof methods (definitions + diagrams).
+* Next lecture continues with **set algebra and counting**.

@@ -1,0 +1,119 @@
+# **Set Theory II (Lecture 2, FoCS Fall 2025, Francesco Bariatti)**
+
+---
+
+## **1. Recap of Basics**
+
+* **Sets**: defined by listing elements or describing them with a property.
+  Example: ({0,2,4,…} = {x \mid x \geq 0, x \text{ even}}).
+* **Membership**: (x \in A) means “x is in A.”
+* **Universal set (U)**: the full domain we are considering.
+* **Subset relation**: (A \subseteq B) ⇔ every element of A is in B.
+* **Equality**: two sets equal if they have the same elements. Equivalent: (A = B \iff (A \subseteq B \text{ and } B \subseteq A)).
+
+---
+
+## **2. Set Operations**
+
+* **Union**: (A \cup B) = everything in A or B.
+* **Intersection**: (A \cap B) = everything in both A and B.
+* **Complement**: (A^C) = everything not in A (relative to U).
+* **Difference**: (A \setminus B) = everything in A but not in B.
+* **Symmetric difference**: (A \oplus B = (A \cup B) \setminus (A \cap B)).
+* **Equivalent statements**:
+
+  * (A \subseteq B \iff A \cap B = A \iff A \cup B = B).
+  * Other equivalent forms use complements (e.g., (B^C \subseteq A^C)).
+
+---
+
+## **3. Proof Methods**
+
+* **By diagram**: shading regions in Venn diagrams.
+* **By elements**: unpacking definitions step by step.
+* **By algebra**: using known rules of set algebra.
+
+---
+
+## **4. Algebra of Sets**
+
+Analogous to arithmetic with + and ·.
+
+* **Commutativity**: order doesn’t matter.
+  (A \cup B = B \cup A), (A \cap B = B \cap A).
+* **Associativity**: grouping doesn’t matter.
+  ((A \cup B) \cup C = A \cup (B \cup C)).
+* **Idempotency**: repeating has no effect.
+  (A \cup A = A), (A \cap A = A).
+* **Distributivity**:
+
+  * (A \cap (B \cup C) = (A \cap B) \cup (A \cap C)).
+  * (A \cup (B \cap C) = (A \cup B) \cap (A \cup C)).
+* **Zero/Unit elements**:
+
+  * (A \cup \emptyset = A), (A \cap U = A).
+  * (A \cup U = U), (A \cap \emptyset = \emptyset).
+* **Complements**:
+
+  * (A \cup A^C = U), (A \cap A^C = \emptyset).
+  * ((A^C)^C = A).
+* **De Morgan’s laws**:
+
+  * ((A \cup B)^C = A^C \cap B^C).
+  * ((A \cap B)^C = A^C \cup B^C).
+* **Absorption**: (A \cap (A \cup B) = A), (A \cup (A \cap B) = A).
+* **Duality principle**: swap ∪ ↔ ∩, ∅ ↔ U to get another true identity.
+
+---
+
+## **5. Proof Examples**
+
+* Symmetric difference:
+  ((A \cup B) \setminus (A \cap B) = (A \setminus B) \cup (B \setminus A)).
+* Absorption, Idempotency shown by rewriting with algebra rules.
+
+---
+
+## **6. Counting with Sets**
+
+* **Inclusion-Exclusion principle**:
+
+  * For two sets:
+    (|A \cup B| = |A| + |B| - |A \cap B|).
+    If disjoint, (|A \cup B| = |A| + |B|).
+  * For three sets:
+    (|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|).
+* Used in examples like counting cubes visible on a cube’s surface.
+
+---
+
+## **7. Sets of Sets**
+
+* A set can itself be an element of another set.
+  Example: ({1,2} \in {{7},{1,2},{7,12,5}}).
+* Must distinguish between membership and being a subset.
+
+---
+
+## **8. Power Sets**
+
+* **Definition**: (P(A) = {X \mid X \subseteq A}).
+* Always contains ∅ and A.
+* Size: (|P(A)| = 2^{|A|}).
+* Example: (P({1,2,3,4})) has 16 elements.
+
+---
+
+## **9. Partitions**
+
+* **Definition**: A partition of S is a collection of disjoint, nonempty subsets that together cover S.
+* Example: Residue classes modulo 7 partition (\mathbb{Z}).
+* Partitions can also be infinite (e.g., splitting naturals into multiples of powers of 2).
+
+---
+
+## **10. Lecture Focus**
+
+* Development of **set algebra** (laws and proofs).
+* **Counting principles** (inclusion-exclusion).
+* **Sets of sets** (power sets, partitions).
