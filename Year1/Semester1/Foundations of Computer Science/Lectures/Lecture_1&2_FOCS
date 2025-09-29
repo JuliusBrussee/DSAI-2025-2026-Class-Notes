@@ -1,0 +1,11 @@
+| **Name**                       | **Equivalences**                                                                 | **Symmetric versions**          |
+|--------------------------------|----------------------------------------------------------------------------------|---------------------------------|
+| **Associativity**              | $(A \cap B) \cap C = A \cap (B \cap C)$ <br> $(A \cup B) \cup C = A \cup (B \cup C)$ |                                 |
+| **Commutativity**              | $A \cap B = B \cap A$ <br> $A \cup B = B \cup A$                                   |                                 |
+| **Idempotency**                | $A \cap A = A$ <br> $A \cup A = A$                                                |                                 |
+| **Distributivity**             | $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ <br> $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$ |                                 |
+| **Identity (zero element)**    | $A \cap \emptyset = \emptyset$ <br> $A \cup U = U$                                 | $\emptyset \cap A = \emptyset$ <br> $U \cup A = U$ |
+| **Identity (unit element)**    | $A \cup \emptyset = A$ <br> $A \cap U = A$                                         | $\emptyset \cup A = A$ <br> $U \cap A = A$ |
+| **Double complement (involution)** | $(A^c)^c = A$                                                                  |                                 |
+| **Complement**                 | $A \cap A^c = \emptyset$ <br> $A \cup A^c = U$ <br> $\emptyset^c = U$ <br> $U^c = \emptyset$ | $A^c \cap A = \emptyset$ <br> $A^c \cup A = U$ |
+| **De Morgan**                  | $(A \cup B)^c = A^c \cap B^c$ <br> $(A \cap B)^c = A^c \cup B^c$                   |                                 |

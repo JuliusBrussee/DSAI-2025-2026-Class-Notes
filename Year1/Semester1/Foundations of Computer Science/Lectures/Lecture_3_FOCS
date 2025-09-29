@@ -1,0 +1,170 @@
+# **Lecture Notes with Explanations**
+
+**Set Theory III + Relations I** — FoCS, Fall 2025
+
+---
+
+## **1. Sets of Sets**
+
+- A set is an object, so it can itself appear inside another set.  
+
+- Important distinction:
+  - **Element of (∈)**: “is a member of.” Example: $2 \in \{1,2,3\}$.
+  - **Subset of (⊆)**: “is contained inside.” Example: $\{2,3\} \subseteq \{1,2,3\}$.
+
+**New concepts:**
+
+- **Powerset of $S$**: The collection of all possible subsets of $S$.  
+  Example: If $S = \{a,b\}$, then $\mathcal{P}(S) = \{\emptyset, \{a\}, \{b\}, \{a,b\}\}$.
+
+  *Think of it as the “universe of all possible smaller groups” you can make from $S$.*
+
+- **Partition of $S$**: A way of splitting $S$ into disjoint, non-empty pieces that together cover $S$.  
+  Example: $\{\{1,4\}, \{2\}, \{3,5,6\}\}$ is a partition of $\{1,2,3,4,5,6\}$.
+
+  *Think: dividing a set into separate “boxes” that don’t overlap, but together contain everything.*
+
+---
+
+## **2. Power Set**
+
+- **Definition**: $\mathcal{P}(A) = \{X \mid X \subseteq A\}$.  
+  In words: “the set of all subsets of $A$.”
+
+- **Key facts:**
+  - $\emptyset \in \mathcal{P}(A)$ because the empty set is always a subset.
+  - $A \in \mathcal{P}(A)$ because every set is a subset of itself.
+
+- Example: For $\{1,2,3,4\}$, the power set has 16 subsets (grouped by size).
+
+- **Rule:** If a set has $n$ elements, its power set has $2^n$ subsets.  
+  *Why? Each element can either be “in” or “out” of a subset — 2 choices each.*
+
+---
+
+## **3. Partitions**
+
+- **Definition**: A partition is a collection $\{A_1, \dots, A_n\}$ such that:
+  1. No subset is empty.
+  2. Subsets don’t overlap.
+  3. Together they cover the whole set.  
+     *Think of dividing a class into groups where every student is in exactly one group.*
+
+- **Trivial partitions**:
+  - Everything together: $\{S\}$.
+  - One element separated: $\{\{x\}, S \setminus \{x\}\}$.
+
+- **Example**: Residue classes mod 3:
+  - $[0] = \{0,3,6,\dots\}$, $[1] = \{1,4,7,\dots\}$, $[2] = \{2,5,8,\dots\}$.
+
+  These three sets partition the natural numbers.
+
+- Partitions can also be infinite: e.g., splitting numbers into sets of multiples of powers of 2.
+
+---
+
+## **4. Cartesian Products**
+
+- **Pairs**: $(a,b)$ — groups two things in order.  
+  *Different from sets: order matters, so $(3,7) \neq (7,3)$.*
+
+- **Cartesian product**: $A \times B = \{(x,y) \mid x \in A, y \in B\}$.  
+  *The set of all possible pairings of one element from $A$ with one from $B$.*
+
+- **Examples:**
+  - $A = \{1,3,5,7\},\ B = \{a,b,c\}$ produces 12 ordered pairs.
+  - Infinite: $\mathbb{Z} \times \mathbb{Z}$ = all coordinate points with integer values.
+
+- **n-tuples**: ordered lists $(x_1,\dots,x_n)$.  
+  Example: coordinates in 3D space $(x,y,z)$.
+
+- **Counting:**
+  - $|A \times B| = |A| \cdot |B|$.
+  - $|A^m| = |A|^m$.  
+    *Think of “how many outfit combinations can I make” from different sets of clothes.*
+
+---
+
+## **5. Relations**
+
+- **Definition**: A relation is a subset of a product.  
+  Example: $R \subseteq A \times B$.
+  - If $R \subseteq A \times A$, it relates elements within one set.
+  - Notation: $(x,y) \in R \iff xRy$.
+
+- **Intuition**: A relation is just a rule that pairs certain elements together.
+
+**Examples:**
+- People → Animals: $L = \{(\text{Alice}, \text{cats}), (\text{Alice}, \text{dogs}), (\text{Bob}, \text{dogs})\}$.
+- Numbers: relations like “=”, “≤”, “<”.
+- Sets: “subset of” or “disjoint from.”
+- Ternary relation: e.g., $x+y=z$.
+
+### **Counting relations**
+- $|A \times B| = |A| \cdot |B|$.
+- Each subset of $A \times B$ is a relation.
+- So there are $2^{|A|\cdot |B|}$ possible relations.
+
+---
+
+## **6. Representations of Relations**
+
+- Arrow diagrams: draw arrows between elements.
+- Matrices: rows for $A$, columns for $B$, mark 1 if related.
+- Directed graphs: if $R \subseteq A \times A$.
+- Plots: if dealing with numbers like $\mathbb{R} \times \mathbb{R}$.
+
+---
+
+## **7. Special Relations**
+
+- **Identity**: $\mathrm{id}_A = \{(x,x) \mid x \in A\}$.  
+  Pairs each element with itself.
+
+- **Inverse**: $R^{-1} = \{(y,x) \mid (x,y) \in R\}$.  
+  Flips the direction of the relation.
+
+**Important lemmas:**
+- $(R^{-1})^{-1} = R$.
+- $\operatorname{dom}(R^{-1}) = \operatorname{ran}(R)$.
+- $\operatorname{ran}(R^{-1}) = \operatorname{dom}(R)$.
+- $R$ injective $\iff R^{-1}$ functional.
+- $R$ total $\iff R^{-1}$ surjective.
+
+---
+
+## **8. Domain and Range**
+
+- **Domain (inputs):** $\operatorname{dom}(R) = \{x \in A \mid \exists y \in B: (x,y) \in R\}$.  
+  All the elements that actually “send out arrows.”
+
+- **Range (outputs):** $\operatorname{ran}(R) = \{y \in B \mid \exists x \in A: (x,y) \in R\}$.  
+  All the elements that “receive arrows.”
+
+---
+
+## **9. Relation Properties**
+
+- **Functional**: each $x$ connects to at most one $y$.  
+  No person has two birthdays.
+
+- **Total**: each $x$ connects to at least one $y$.  
+  Every person has some birthday.
+
+- **Injective (one-to-one)**: each $y$ comes from at most one $x$.  
+  No two people share the same personal ID.
+
+- **Surjective (onto)**: each $y$ has at least one $x$.  
+  Every available seat has at least one ticket holder.
+
+**A function** = total + functional relation.
+
+---
+
+# **Summary**
+
+- **Powersets**: All possible subsets. Size grows as $2^n$.
+- **Partitions**: Divide a set into disjoint, covering pieces.
+- **Cartesian products**: Build ordered tuples. Size multiplies.
+- **Relations**: Subsets of products, with many representations.
+- **Key properties** (functional, total, injective, surjective) explain how relations behave. Functions are special relations that are both total and functional.
