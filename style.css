@@ -836,12 +836,12 @@ body {
 
 /* Highlight Important Mathematical Concepts */
 .content strong {
-    color: var(--primary);
+    color: inherit;
     font-weight: 600;
 }
 
 .content em {
-    color: var(--accent-foreground);
+    color: inherit;
     font-style: italic;
 }
 
