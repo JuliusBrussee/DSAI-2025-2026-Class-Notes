@@ -59,12 +59,6 @@ Year3/
 - **Icons**: Font Awesome 6
 - **Hosting**: GitHub Pages
 
-## New UX Highlights
-
-- Course cards open a course screen with a file grid and per‑file “Quiz/No quiz” badges.
-- Sidebar always shows the full folder tree and auto‑expands/highlights the active file.
-- Copy link button in the content toolbar for sharing the current file.
-
 ## Deep Links
 
 - Open a file: `#file=Year1/Semester1/<Course>/Lectures/<Lecture>` (with or without `.md`).
@@ -181,42 +175,6 @@ Date: YYYY-MM-DD
 - Use concise, descriptive messages. Suggested pattern:
   - `Year1/<Course>: Lecture_<N> - <Topic> (<short summary>)`
   - `Year1/<Course>: update ExamPrep (sections + examples)`
-
-
-## Roadmap / TODO
-
-- Fill out currently empty `ExamPrep.md` files in `Year1/Semester1`.
-- Prefer `.md` extensions for new lecture notes
-- Add `Semester2` structure and placeholders when schedules are confirmed.
-- Add assets (figures/diagrams) to each course as needed and fix any “attachment:” style links by moving images into an `assets/` folder.
-
-## Notion → Repo → Quiz workflow (optional)
-
-You can import notes exported from Notion and auto‑generate quizzes for each lecture.
-
-- Quick import (manual export):
-  1) In Notion, Export → Markdown & CSV for the pages you want.
-  2) Run the ingest script to place files into this repo structure:
-     - Example: `python scripts/ingest_notion_export.py --source path/to/export.zip --default-year Year1 --default-semester Semester1`
-     - Optional mapping: `--course-map scripts/config/course_map.example.yaml`
-     - Dry run first: add `--dry-run`.
-
-- Generate quizzes from notes:
-  - `python scripts/generate_quizzes_from_md.py --root Year1 --out quizzes` (add `--force` to overwrite existing)
-  - Heuristics supported:
-    - Bullet definitions like `- Term: definition` produce multiple‑choice questions.
-    - Q/A lines like `Q: ...` then `A: ...` produce short‑text questions.
-
-- Auto on push:
-  - See `.github/workflows/generate-quizzes.yml` for a sample (commented). Enable and adapt as needed.
-
-### Tips for better quiz generation
-- Use clear definition bullets: `- Term: concise definition` or `- **Term**: definition`.
-- Add explicit Q/A lines where you want guaranteed questions.
-- Keep definitions under ~280 chars for cleaner options.
-
-### Advanced (Notion API sync)
-Prefer true sync from Notion? Add a Notion integration and use a custom fetch script with the Notion API (requires secrets like `NOTION_TOKEN`). This repo ships a simple manual‑export importer for reliability; happy to scaffold an API pull workflow on request.
 
 ## Disclaimer and License
 
