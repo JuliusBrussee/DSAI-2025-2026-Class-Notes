@@ -245,3 +245,74 @@ Classify these relations on $A=\{1,2,3\}$:
 | Equivalence relation | Reflexive, symmetric, transitive | Congruence mod $n$ |
 | Equivalence class | $[x]=\{y \mid xRy\}$ | Numbers ≡1 mod 3 |
 | Quotient set | $A/R=\{[x]\}$ | Partition of $A$ |  
+
+---
+
+# **Theorems and Key Observations — Relations II**
+
+## Composition
+
+**Theorem (2.1) — Associativity of composition**  
+If $R \subseteq A \times B$, $S \subseteq B \times C$, and $T \subseteq C \times D$, then:  
+$$(R \circ S) \circ T = R \circ (S \circ T)$$  
+
+---
+
+## Transitivity and Powers
+
+**Theorem (2.2) — Transitivity via repeated composition**  
+Let $R \subseteq A \times A$.  
+$R$ is transitive if and only if $R^n \subseteq R$ for all $n \geq 1$.  
+
+---
+
+## Closures
+
+**Theorem (2.3, 2.4) — Closures of relations**  
+For any relation $R \subseteq A \times A$:  
+
+- Reflexive closure:  
+  $$reflexive(R) = R \cup id_A$$  
+
+- Symmetric closure:  
+  $$symmetric(R) = R \cup R^{-1}$$  
+
+- Transitive closure:  
+  $$transitive(R) = R^+ = \bigcup_{n \geq 1} R^n$$  
+
+Additionally:  
+
+- Reflexive + transitive closure:  
+  $$R^* = \bigcup_{n \geq 0} R^n, \quad R^0 = id_A$$  
+
+---
+
+## Equivalence Relations
+
+**Theorem (2.6) — Equivalence relations induce partitions**  
+If $R \subseteq A \times A$ is an equivalence relation, then the set of equivalence classes  
+$$A/R = \{ [x] \mid x \in A \}$$  
+is a partition of $A$, satisfying:  
+
+1. $a \in [a]$ for all $a \in A$.  
+2. $[a] = [b] \iff aRb$.  
+3. If $[a] \neq [b]$, then $[a] \cap [b] = \emptyset$.  
+
+---
+
+## Observations and Lemmas
+
+- $(R^{-1})^{-1} = R$.  
+- $\operatorname{dom}(R^{-1}) = \operatorname{ran}(R)$.  
+- $\operatorname{ran}(R^{-1}) = \operatorname{dom}(R)$.  
+- $R$ injective $\iff R^{-1}$ functional.  
+- $R$ total $\iff R^{-1}$ surjective.  
+- $R^{-1} \circ R$ is always symmetric.  
+- Reflexive $\iff id_A \subseteq R$.  
+- Irreflexive $\iff id_A \cap R = \emptyset$.  
+- Symmetric $\iff R^{-1} \subseteq R$.  
+- Antisymmetric $\iff R^{-1} \cap R \subseteq id_A$.  
+- Transitive $\iff R^2 \subseteq R$.  
+- “Not reflexive” $\neq$ “Irreflexive.”  
+
+---
