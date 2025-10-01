@@ -708,6 +708,11 @@ body {
     border-radius: 3px;
 }
 
+.content {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
 .content h1,
 .content h2,
 .content h3,
@@ -797,6 +802,7 @@ body {
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: var(--shadow);
+    table-layout: fixed;
 }
 
 .content th,
@@ -804,6 +810,8 @@ body {
     border: 1px solid var(--border);
     padding: 0.75rem;
     text-align: left;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .content th {

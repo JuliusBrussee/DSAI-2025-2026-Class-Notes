@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContainer = document.querySelector('.main-container');
     const breadcrumb = document.getElementById('breadcrumb');
     const coursesGrid = document.getElementById('courses-grid');
-    const converter = new showdown.Converter();
+    const converter = new showdown.Converter({ tables: true });
 
     let files = [];
     let searchIndex;
