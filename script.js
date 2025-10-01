@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "Year1/Semester1/Foundations of Computer Science/Lectures/Lecture_1_FOCS",
     "Year1/Semester1/Foundations of Computer Science/Lectures/Lecture_2_FOCS",
     "Year1/Semester1/Foundations of Computer Science/Lectures/Lecture_3_FOCS",
+    "Year1/Semester1/Foundations of Computer Science/Lectures/Lecture_4_FOCS",
     "Year1/Semester1/Foundations of Computer Science/Lectures/Lecture_Table_FOCS",
     "Year1/Semester1/Introduction to Digital Skills and Programming/ExamPrep.md",
     "Year1/Semester1/Introduction to Digital Skills and Programming/Lectures/Lecture_1_DSIP",
