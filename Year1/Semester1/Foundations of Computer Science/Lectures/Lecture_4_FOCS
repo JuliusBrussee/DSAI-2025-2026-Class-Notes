@@ -166,7 +166,7 @@ Observation: $R^{-1}\circ R$ is always symmetric.
 
 ### 4.3 Transitivity
 - **Transitive**: If $xRy$ and $yRz$, then $xRz$.  
-
+- Transitivity means: “whenever you can walk in two steps, you must also be able to jump in one step.”
 ---
 
 ### 4.4 Characterizations
