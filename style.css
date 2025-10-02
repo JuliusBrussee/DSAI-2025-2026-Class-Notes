@@ -154,7 +154,7 @@ body {
 /* Breadcrumb */
 .breadcrumb {
     position: fixed;
-    top: 73px;
+    top: 67px; /* dont even */
     left: 0;
     right: 0;
     background: var(--muted);
@@ -180,7 +180,7 @@ body {
 /* Main Container */
 .main-container {
     display: flex;
-    margin-top: 125px;
+    margin-top: 116px;
     min-height: calc(100vh - 125px);
 }
 
